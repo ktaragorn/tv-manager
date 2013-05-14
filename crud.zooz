@@ -1,0 +1,322 @@
+[ZooZ v1.2]
+[Project Project 1]
+
+[MainWindow]
+Title Project 1
+[End Widget]
+
+[Widget HList1]
+Parent   MainWindow
+Type     HList
+Row      0
+Col      0
+Rowspan  1
+Colspan  1
+PCONF  -ipadx  0
+PCONF  -ipady  0
+PCONF  -padx  0
+PCONF  -pady  0
+PCONF  -sticky  nsew
+ECONF  HOPTIONAL  0
+ECONF  HSCROLLLOC  
+ECONF  SCROLLON  0
+ECONF  VOPTIONAL  0
+ECONF  VSCROLLLOC  
+[End Widget]
+
+[Widget Labelframe1]
+Parent   MainWindow
+Type     Labelframe
+Row      0
+Col      1
+Rowspan  1
+Colspan  1
+WCONF  -takefocus  0
+WCONF  -text  Show Details
+PCONF  -ipadx  undef
+PCONF  -ipady  undef
+PCONF  -padx  undef
+PCONF  -pady  undef
+PCONF  -sticky  nsew
+ECONF  HOPTIONAL  0
+ECONF  HSCROLLLOC  
+ECONF  SCROLLON  0
+ECONF  VOPTIONAL  0
+ECONF  VSCROLLLOC  
+[End Widget]
+
+[Widget Label4]
+Parent   Labelframe1
+Type     Label
+Row      3
+Col      0
+Rowspan  1
+Colspan  1
+WCONF  -takefocus  0
+WCONF  -text  Pattern
+PCONF  -ipadx  0
+PCONF  -ipady  0
+PCONF  -padx  0
+PCONF  -pady  0
+PCONF  -sticky  w
+ECONF  HOPTIONAL  0
+ECONF  HSCROLLLOC  
+ECONF  SCROLLON  0
+ECONF  VOPTIONAL  0
+ECONF  VSCROLLLOC  
+[End Widget]
+
+[Widget Label1]
+Parent   Labelframe1
+Type     Label
+Row      0
+Col      0
+Rowspan  1
+Colspan  1
+WCONF  -justify  center
+WCONF  -takefocus  0
+WCONF  -text  Name
+PCONF  -ipadx  undef
+PCONF  -ipady  undef
+PCONF  -padx  undef
+PCONF  -pady  undef
+PCONF  -sticky  w
+ECONF  HOPTIONAL  0
+ECONF  HSCROLLLOC  
+ECONF  SCROLLON  0
+ECONF  VOPTIONAL  0
+ECONF  VSCROLLLOC  
+[End Widget]
+
+[Widget name]
+Parent   Labelframe1
+Type     Entry
+Row      0
+Col      1
+Rowspan  1
+Colspan  1
+WCONF  -exportselection  1
+WCONF  -takefocus  undef
+WCONF  -text  
+WCONF  -textvariable  \%editshow
+PCONF  -ipadx  0
+PCONF  -ipady  0
+PCONF  -padx  0
+PCONF  -pady  0
+PCONF  -sticky  w
+ECONF  HOPTIONAL  0
+ECONF  HSCROLLLOC  
+ECONF  SCROLLON  0
+ECONF  VOPTIONAL  0
+ECONF  VSCROLLLOC  
+[End Widget]
+
+[Widget defmode]
+Parent   Labelframe1
+Type     Entry
+Row      5
+Col      1
+Rowspan  1
+Colspan  1
+WCONF  -exportselection  1
+WCONF  -takefocus  undef
+WCONF  -text  undef
+WCONF  -textvariable  \%editshow
+PCONF  -ipadx  0
+PCONF  -ipady  0
+PCONF  -padx  0
+PCONF  -pady  0
+PCONF  -sticky  w
+ECONF  HOPTIONAL  0
+ECONF  HSCROLLLOC  
+ECONF  SCROLLON  0
+ECONF  VOPTIONAL  0
+ECONF  VSCROLLLOC  
+[End Widget]
+
+[Widget Label3]
+Parent   Labelframe1
+Type     Label
+Row      2
+Col      0
+Rowspan  1
+Colspan  1
+WCONF  -text  Path
+PCONF  -ipadx  0
+PCONF  -ipady  0
+PCONF  -padx  0
+PCONF  -pady  0
+PCONF  -sticky  w
+ECONF  HOPTIONAL  0
+ECONF  HSCROLLLOC  
+ECONF  SCROLLON  0
+ECONF  VOPTIONAL  0
+ECONF  VSCROLLLOC  
+[End Widget]
+
+[Widget Label2]
+Parent   Labelframe1
+Type     Label
+Row      1
+Col      0
+Rowspan  1
+Colspan  1
+WCONF  -takefocus  0
+WCONF  -text  Category
+PCONF  -ipadx  0
+PCONF  -ipady  0
+PCONF  -padx  0
+PCONF  -pady  0
+PCONF  -sticky  w
+ECONF  HOPTIONAL  0
+ECONF  HSCROLLLOC  
+ECONF  SCROLLON  0
+ECONF  VOPTIONAL  0
+ECONF  VSCROLLLOC  
+[End Widget]
+
+[Widget Label5]
+Parent   Labelframe1
+Type     Label
+Row      4
+Col      0
+Rowspan  1
+Colspan  1
+WCONF  -takefocus  0
+WCONF  -text  List Depth
+PCONF  -ipadx  0
+PCONF  -ipady  0
+PCONF  -padx  0
+PCONF  -pady  0
+PCONF  -sticky  w
+ECONF  HOPTIONAL  0
+ECONF  HSCROLLLOC  
+ECONF  SCROLLON  0
+ECONF  VOPTIONAL  0
+ECONF  VSCROLLLOC  
+[End Widget]
+
+[Widget pattern]
+Parent   Labelframe1
+Type     Entry
+Row      3
+Col      1
+Rowspan  1
+Colspan  1
+WCONF  -exportselection  1
+WCONF  -takefocus  undef
+WCONF  -text  undef
+WCONF  -textvariable  \%editshow
+PCONF  -ipadx  0
+PCONF  -ipady  0
+PCONF  -padx  0
+PCONF  -pady  0
+PCONF  -sticky  w
+ECONF  HOPTIONAL  0
+ECONF  HSCROLLLOC  
+ECONF  SCROLLON  0
+ECONF  VOPTIONAL  0
+ECONF  VSCROLLLOC  
+[End Widget]
+
+[Widget path]
+Parent   Labelframe1
+Type     Entry
+Row      2
+Col      1
+Rowspan  1
+Colspan  1
+WCONF  -exportselection  1
+WCONF  -takefocus  undef
+WCONF  -text  undef
+WCONF  -textvariable  \%editshow
+PCONF  -ipadx  0
+PCONF  -ipady  0
+PCONF  -padx  0
+PCONF  -pady  0
+PCONF  -sticky  w
+ECONF  HOPTIONAL  0
+ECONF  HSCROLLLOC  
+ECONF  SCROLLON  0
+ECONF  VOPTIONAL  0
+ECONF  VSCROLLLOC  
+[End Widget]
+
+[Widget category]
+Parent   Labelframe1
+Type     Entry
+Row      1
+Col      1
+Rowspan  1
+Colspan  1
+WCONF  -exportselection  1
+WCONF  -takefocus  undef
+WCONF  -text  undef
+WCONF  -textvariable  \%editshow
+PCONF  -ipadx  0
+PCONF  -ipady  0
+PCONF  -padx  0
+PCONF  -pady  0
+PCONF  -sticky  w
+ECONF  HOPTIONAL  0
+ECONF  HSCROLLLOC  
+ECONF  SCROLLON  0
+ECONF  VOPTIONAL  0
+ECONF  VSCROLLLOC  
+[End Widget]
+
+[Widget Label6]
+Parent   Labelframe1
+Type     Label
+Row      5
+Col      0
+Rowspan  1
+Colspan  1
+WCONF  -takefocus  0
+WCONF  -text  Default Mode
+PCONF  -ipadx  0
+PCONF  -ipady  0
+PCONF  -padx  0
+PCONF  -pady  0
+PCONF  -sticky  w
+ECONF  HOPTIONAL  0
+ECONF  HSCROLLLOC  
+ECONF  SCROLLON  0
+ECONF  VOPTIONAL  0
+ECONF  VSCROLLLOC  
+[End Widget]
+
+[Widget listdepth]
+Parent   Labelframe1
+Type     Entry
+Row      4
+Col      1
+Rowspan  1
+Colspan  1
+WCONF  -takefocus  undef
+WCONF  -text  undef
+WCONF  -textvariable  \%editshow
+PCONF  -ipadx  0
+PCONF  -ipady  0
+PCONF  -padx  0
+PCONF  -pady  0
+PCONF  -sticky  w
+ECONF  HOPTIONAL  0
+ECONF  HSCROLLLOC  
+ECONF  SCROLLON  0
+ECONF  VOPTIONAL  0
+ECONF  VSCROLLLOC  
+[End Widget]
+
+[Var %editshow]
+()
+[End Var]
+
+[Var %_Variable_0]
+()
+[End Var]
+
+[Var $_Variable_1]
+undef
+[End Var]
+
