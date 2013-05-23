@@ -42,7 +42,7 @@ sub loadRecursiveFiles {
 		$dirs{dirname $file} = 1;
 		
 	}
-	@list = (nsort(keys (%dirs )), @list) ;#add folders to file list
+	@list = nsort(keys (%dirs ), @list) ;#add folders to file list
 	return @list;
 	
 }
