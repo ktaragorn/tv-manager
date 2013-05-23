@@ -24,7 +24,8 @@ sub SetupUI(){
 	######################
 
 	$MW = MainWindow->new;
-
+	$MW->minsize(100,600);
+	$MW->gridRowconfigure(0, -weight => 1);
 	# Widget Labelframe1 isa Labelframe
 	$ZWIDGETS{'Labelframe1'} = $MW->Labelframe(
 	   -takefocus => 0,
@@ -35,6 +36,7 @@ sub SetupUI(){
 	   -rowspan => 3,
 	   -sticky  => 'nsew',
 	  );
+	  $ZWIDGETS{'Labelframe1'}->gridRowconfigure(0, -weight => 1);
 
 	# Widget shwList isa HList
 	$ZWIDGETS{'shwList'} = $ZWIDGETS{Labelframe1}->Scrolled('Tree',
@@ -43,11 +45,12 @@ sub SetupUI(){
 	   -exportselection => 0,
 	   -separator	    => '/',
 	   -width  =>30,
-	   -height =>28,
+	   #-height =>28,
 	   -indicator =>1
 	  )->grid(
 	   -row    => 0,
 	   -column => 0,
+	   -sticky  => 'nsew',
 	  );
 	  
 	# Widget addShows isa Button
@@ -70,6 +73,7 @@ sub SetupUI(){
 	   -sticky  => 'nsew',
 	  );
 	  
+	  $ZWIDGETS{'Labelframe2'}->gridRowconfigure(0, -weight => 1);
 
 	  
 	# Widget epiList isa HList
@@ -79,11 +83,12 @@ sub SetupUI(){
 	   -exportselection => 0,
 	   -separator	    => '/',
 	   -width           => 70,
-	   -height => 30
+	  # -height => 30
 	  )->grid(
-	   -row    => 1,
+	   -row    => 0,
 	   -column => 0,   
 	   -columnspan => 2,
+	   -sticky  => 'nsew',
 	  );
 	  
 
