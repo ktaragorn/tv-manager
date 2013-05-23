@@ -32,7 +32,6 @@ sub loadRecursiveFiles {
 	 my @list = File::Find::Rule->maxdepth($depth)
 					->relative
 					->file->name(qr/$pattern/i)->name("*.avi","*.mp4","*.mkv")
-					->extras({preprocess=>sub{nsort @_;}})
 					->in($path);
 
 	#extracting immediate folder names - this should be suffient. Using hash to store unique paths
