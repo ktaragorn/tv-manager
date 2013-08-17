@@ -57,6 +57,7 @@ $MW->gridColumnconfigure(0, -weight => 1);
 #Load Show list
 loadShowList();
 
+srand();
 ###############
 #
 # MainLoop
