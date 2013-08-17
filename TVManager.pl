@@ -26,9 +26,8 @@ use Tk::DialogBox;
 
 require "utils.pl";
 require "dataStore.pl";
-require "MainUI.pl";
 
-my %show = (
+our %show = (
 		'pattern' => '',
 		'name' => '',
 		'path' => '',
@@ -39,6 +38,7 @@ my %show = (
 		'category'=> ''
         );
         
+require "MainUI.pl";
 #
 # Global variables
 #
