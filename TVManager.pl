@@ -153,7 +153,7 @@ sub playRandom {
 	my @fileList = loadRecursiveFiles($show{path},$show{pattern},$show{depth});
 	my $randVid = "" ;
 	my $count =0;
-	$randVid = $fileList[int(rand(scalar(@fileList)+1))] until($randVid =~ /.avi$/|| $count++>10);
+	$randVid = $fileList[int(rand(scalar(@fileList)+1))] until(is_video($randVid)|| $count++>10);
 	play($show{path},$randVid);
 }
 

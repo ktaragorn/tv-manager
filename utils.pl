@@ -9,6 +9,7 @@ use Sort::Naturally;
 use File::Find::Rule;
 use Cwd 'abs_path';
 use File::Spec::Functions 'rel2abs';
+
 sub copyhash {	
 	my($key,$value);
 	my ($dest,$source) = @_;
@@ -19,6 +20,8 @@ sub clearhash {
 	my $hash = shift;
 	$hash->{$_}="" foreach keys %$hash;
 }
+
+my @video_file_types =("*.avi","*.mp4","*.mkv", "*.flv");
 
 #TODO spanish names? eg 30 Rock/Season 5/05x13
 sub loadRecursiveFiles {
@@ -31,7 +34,7 @@ sub loadRecursiveFiles {
 	
 	 my @list = File::Find::Rule->maxdepth($depth)
 					->relative
-					->file->name(qr/$pattern/i)->name("*.avi","*.mp4","*.mkv")
+					->file->name(qr/$pattern/i)->name(@video_file_types)
 					->in($path);
 
 	#extracting immediate folder names - this should be suffient. Using hash to store unique paths
@@ -44,6 +47,15 @@ sub loadRecursiveFiles {
 	@list = nsort(keys (%dirs ), @list) ;#add folders to file list
 	return @list;
 	
+}
+
+sub is_video{
+	my $name = shift;
+
+	foreach my $type (@video_file_types){
+		return 1 if $name =~/\$type$/;
+	}
+	return 0;
 }
 
 
@@ -59,12 +71,9 @@ sub play{
 	my $file = rel2abs($relFile,$path);
 	say "Playing $file";
 
-	if($^O eq "MSWin32"){
-		$videoPlayer = "\"C:\\Program Files (x86)\\Windows Media Player\\wmplayer.exe\""." \"";
-	} else {
-		if($^O eq "linux"){
-			$videoPlayer = "xdg-open";
-		}
+	switch($^O){
+		case 	"MSWin32" {$videoPlayer = "\"C:\\Program Files (x86)\\Windows Media Player\\wmplayer.exe\""." \"";}	
+		case 	"linux"	      {$videoPlayer = "xdg-open";}
 	}
 
 	my @output =($videoPlayer,$file);
