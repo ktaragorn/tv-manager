@@ -9,6 +9,7 @@ use Sort::Naturally;
 use File::Find::Rule;
 use Cwd 'abs_path';
 use File::Spec::Functions 'rel2abs';
+ use Switch;
 
 sub copyhash {	
 	my($key,$value);
